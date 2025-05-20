@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULLSTACK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 40px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            background-color: red;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: #e027a9;
+            border-style: solid;
+            text-shadow: 34px;
+        }
+
+        fieldset {
+            border: 2px solid blue;
+            border-radius: 5px;
+            padding: 20px;
+            border: brown;
+            border-radius: 43px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: blue;
+            padding: 0 10px;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+            color: slategrey;
+        }
+
+        textarea {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: royalblue;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ddc80b;
+            color: #351186;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: orangered;
+            border-bottom: 2px solid #b6db10;
+            padding-bottom: 10px;
+             margin-bottom: 20px;
+            box-sizing: calc(13px, 43px);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #ffb24e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            background-color: aqua;
+            text-align: center;
+            border-radius: 34PX;
+        }
+
+        h3 {
+            color: yellow;
+            text-wrap: 20PX;
+            text-align: center;
+            border-radius: 32px;
+            background-color: #e027a9;
+            text-size-adjust: 45px;
+            font-size: 23PX;
+        }
+
+        p {
+            margin: auto;
+            border: red;
+            border-radius: 3px;
+            font-size: 16px;
+            color: black;
+            background-color: gray;
+            max-width: 700px;
+            margin-bottom: 20px; transform: scale(1.05);
+
+        }
+        p:hover {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease; 
+  transform: rotate(3deg);
+  transition: transform 0.3s ease;
+}
+
+
+
+        nav {
+            background-color: #e027a9;
+            color: yellow;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgb(192, 7, 7);
+            background-color: yellow;
+            border-radius: 13px;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 6px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: red;
+            border-radius: 4px;
+            color: yellow;
+
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+           
+        }
+
+        .search-box input[type="text"] {
+            padding: 6px 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 6px 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: blue;
+            transform: scale(1.03);
+        }
+
+        .login-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-form label {
+            color: purple;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .login-form .forgot {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-form .forgot a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid yellowgreen;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: palevioletred;
+            color: rebeccapurple;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .forgot {
+            text-align: end;
+            color: #b6db10;
+            margin-top: 10px;
+            background-color: #007BFF;
+            border-radius: 20px;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 14px;
+        }
+
+        fieldset {
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2e7d32);
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            color: #b7f32a;
+            background-color: #e027a9;
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+       
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2e7d32);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            text-align: justify;
+            max-width: 800px;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        footer {
+            background-color: bla;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            border-radius: 23PX;
+        
+        }
+
+        .social-login {
+
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icon {
+            align-items: center;
+        }
+
+        
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container p {
+            padding: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+        }
+
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot {
+            margin-top: 10px;
+            text-align: center;
+             text-shadow: #e027a9;
+        }
+
+        .forgot a {
+            color: purple;
+            text-decoration: none;
+            text-shadow: #e027a9;
+        }
+
+        .forgot a:hover {
+            text-decoration: underline;
+            text-shadow: #e027a9;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .info-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .info-card p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .info-card a {
+            display: block;
+            margin-top: 8px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .info-card a:hover {
+            text-decoration: underline;
+        }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text, .image {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .text h2 {
+      font-size: 1.8rem;
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+      
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image img:hover {
+      transform: scale(1.05);
+    }
+
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Login</a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+    <h1>SuryaTechno</h1>
+    <header>
+        <h2>welcome back suraj</h2>
+    </header>
+    </head>
+
+    <body>
+       
+        <button onclick="showContent()">showContent</button>
+
+ <template>
+      <H3>SELEECT YOUR LANGUAGES CHOICE:-</H3>
+         <div class="section">
+    <div class="image">
+      <img src="c:\Users\DK\OneDrive\Pictures\fend.png" alt="Frontend Development" />
+    </div>
+    <div class="text">
+      
+      <h2>1.Frontend Development</h2>
+      <p>
+        Frontend development refers to the part of web development that focuses on what users see in their browser.
+        It involves HTML, CSS, and JavaScript to build responsive layouts, animations, user interfaces, and a seamless user experience.
+        Frameworks like React, Angular, and Vue.js are commonly used.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="section reverse">
+    <div class="image">
+      <img src="c:\Users\DK\OneDrive\Pictures\bachend.png" alt="Backend Development" />
+    </div>
+    <div class="text">
+      <h2>2.Backend Development</h2>
+      <p>
+        Backend development handles the server-side logic, databases, and APIs. It's responsible for the data exchange,
+        business rules, authentication, and integration with frontend components. Popular technologies include Node.js,
+        Python (Django/Flask), PHP, Java, and databases like MySQL or MongoDB.
+      </p>
+    </div>
+  </div>
+       
+            <section>
+                <h2>SOFTWARE ENGINEERING</h2>
+                <article>
+                    <h3>1.FRONTEND DEVELOPER</h3>
+                    <p>Researchers have unveiled a new AI model that surpasses previous performance benchmarks across
+                        multiple tasks.</p>
+                </article>
+                <article>
+                    <h3>2.BACKEND DEVELOPER</h3>
+                    <p>Experts discuss the next phase of quantum computing development and its potential impact on
+                        cybersecurity.</p>
+                </article>
+                <article>
+                    <h3>3.FULLSTACK DEVELOPER</h3>
+                    <p>Experts discuss the next phase of quantum computing development and its potential impact on
+                        cybersecurity.</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>functionality</h2>
+                <article>
+                    <h3>Application Software</h3>
+                    <p>Application software helps engineers solve challenging problems by focusing on their specific
+                        needs
+                        with point-and-click simplicity—no programming required.</p>
+                </article>
+                <article>
+                    <h3> Desktop Developer</h3>
+                    <p>Builds software for computers (Windows, macOS, Linux.</p>
+                </article>
+                <article>
+                    <h3> Game Developer</h3>
+                    <p>Builds software for computers Tools: Unity, Unreal Engine, Godot.</p>
+                </article>
+            </section>
+
+
+
+            <div class="main-content">
+                <img src="c:\Users\DK\OneDrive\Pictures\sss3.png" alt="Main Image">
+                <p>
+                    Welcome to your personalized dashboard. This section can display an overview, news, or anything
+                    important.
+                    You can update this paragraph with dynamic content or personal notes. This layout is clean,
+                    responsive,
+                    and ready for customization. Whether you're learning web development or building a project,
+                    this page gives you a great starting point.
+                </p>
+            </div>
+            <div class="wrapper">
+                <div class="container">
+                    <img src="c:\Users\DK\OneDrive\Pictures\s.png" alt="Image 1">
+                    <p>This is most alone and peaceful of the software engineers to computing.</p>
+                </div>
+
+                <div class="container">
+                    <img src="c:\Users\DK\OneDrive\Pictures\sss.png" alt="Image 2">
+                    <p>This is mostful of devices and peaceful of the software engineers to computing.</p>
+                </div>
+
+                <div class="container">
+                    <img src="c:\Users\DK\OneDrive\Pictures\sss2.png" alt="Image 3">
+                    <p>This is most alone and peaceful of the software engineers to computing.</p>
+                </div>
+            </div>
+
+            <br>
+
+
+
+
+            <div class="wrapper">
+               
+                <div class="container">
+                    <form class="login-form" action="/login" method="post">
+                        <h2>Login</h2>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <input type="submit" value="Login">
+
+                        <div class="forgot">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="wrapper">
+                <div class="container">
+                    <form action="/submit" method="post">
+                        <fieldset>
+                            <legend>Feedback Form</legend>
+
+                            <label for="feedback">Your feedback:</label>
+                            <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback here..."
+                                required></textarea>
+
+                            <input type="submit" value="Submit">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+                <div class="container info-card">
+                    <img src="c:\Users\DK\OneDrive\Pictures\hakcer.png" alt="computers">
+                    <p>Meet me this platform.</p>
+                    <a href="https://www.facebook.com" target="_blank">facebook.com</a>
+                    <a href="https://www.instagram.com" target="_blank">instagram.com</a>
+                    <a href="https://www.youtube.com" target="_blank">youtube.com</a>
+                    <a href="https://www.twitter.com" target="_blank">twitter.com</a>
+                </div>
+            </div>
+             
+
+
+
+
+              <H3> your best opportunity</H3>
+         <div class="section">
+    <div class="image">
+      <img src="https://media.istockphoto.com/id/1046630750/photo/shocked-and-surprised-young-confident-executive-businessman-boy.jpg?s=1024x1024&w=is&k=20&c=9U3ik-gIi3Ideox1KOQuaxu5gMQgWh5LOx_GN6LGtIw=" alt="Frontend Development" />
+    </div>
+    <div class="text">
+      
+      <h2>i'm suraj</h2>
+      <p>
+        Frontend development refers to the part of web development that focuses on what users see in their browser.
+        It involves HTML, CSS, and JavaScript to build responsive layouts, animations, user interfaces, and a seamless user experience.
+        Frameworks like React, Angular, and Vue.js are commonly used.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="section reverse">
+    <div class="image">
+      <img src="https://media.istockphoto.com/id/1221041044/photo/teenage-girl-at-white-background-stock-images.jpg?s=1024x1024&w=is&k=20&c=GqcDXoodouERWXBO8J2eHbNjnwu39zcU_GfLfpmiv44=" alt="Backend Development" />
+    </div>
+    <div class="text">
+      <h2>Bittu</h2>
+      <p>
+        Backend development handles the server-side logic, databases, and APIs. It's responsible for the data exchange,
+        business rules, authentication, and integration with frontend components. Popular technologies include Node.js,
+        Python (Django/Flask), PHP, Java, and databases like MySQL or MongoDB.
+      </p>
+    </div>
+  </div>
+       
+            <footer>
+            
+                <p>&copy; 2025 Suraj's Web Portal. All rights reserved.</p>
+                <div class="social-login">
+                    <a href="#" class="social-icon facebook" title="Login with Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter" title="Login with Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram" title="Login with Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon github" title="Login with GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+            </footer>
+        </template>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function showContent() {
+                let temp = document.getElementsByTagName("template")[0];
+                let clon = temp.content.cloneNode(true);
+                document.body.appendChild(clon);
+            }
+        </script>
+</body>
+
+</html>
